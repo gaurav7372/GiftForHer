@@ -9,15 +9,26 @@ import { Component } from '@angular/core';
 })
 export class Hero {
 
-  scrollToGift() {
-    const section = document.getElementById('gift');
+  scrollTo(id: string): void {
 
-    if (section) {
-      section.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    const element = document.getElementById(id);
+
+    if (!element) {
+      return;
     }
+
+    const navbarHeight = 80;
+
+    const y =
+      element.getBoundingClientRect().top +
+      window.scrollY -
+      navbarHeight;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    });
+
   }
 
 }

@@ -1,68 +1,101 @@
-<section class="hero d-flex align-items-center">
+<section class="hero" id="home">
 
-  <div class="floating-hearts">
-    <span>❤</span>
-    <span>💖</span>
-    <span>💕</span>
-    <span>💗</span>
-    <span>💞</span>
-    <span>🌸</span>
-    <span>✨</span>
-    <span>💖</span>
-  </div>
+    <div class="floating-hearts">
 
-  <div class="container">
-
-    <div class="row align-items-center">
-
-      <div class="col-lg-6 text-center text-lg-start">
-
-        <h4 class="welcome">
-          A Little Surprise For...
-        </h4>
-
-        <h1 class="display-3 fw-bold gradient-text hero-title">
-          Someone Truly Special ❤️
-        </h1>
-
-        <p class="hero-text mt-4">
-          Every smile deserves a reason.
-          This tiny website was made with care,
-          hoping it brings one more smile to your day.
-        </p>
-
-     <button
-  class="btn btn-love btn-lg mt-4"
-  (click)="scrollToGift()">
-
-  🎁 Start the Surprise
-
-</button>
-
-      </div>
-
-      <div class="col-lg-6 text-center mt-5 mt-lg-0">
-
-        <div class="hero-card glass">
-
-          <div class="heart-circle">
-            💝
-          </div>
-
-          <h3 class="mt-4">
-            Just For You
-          </h3>
-
-          <p>
-            Every page hides a little surprise.
-          </p>
-
-        </div>
-
-      </div>
+        <span>❤</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>🌸</span>
+        <span>✨</span>
+        <span>💗</span>
+        <span>💞</span>
 
     </div>
 
-  </div>
+    <div class="container">
+
+        <div class="row align-items-center min-vh-100">
+
+            <div class="col-lg-6 text-center text-lg-start">
+
+                <span class="badge-love">
+                    ✨ Made Especially For You ✨
+                </span>
+
+                <h1 class="hero-title mt-4">
+
+                    Happy Birthday
+
+                    <br>
+
+                    Beautiful Soul
+
+                </h1>
+
+                <p class="hero-text mt-4">
+
+                    This isn't just a website.
+
+                    It's a small collection of memories,
+                    wishes and surprises created especially for you.
+
+                    I hope it makes you smile today.
+
+                </p>
+
+                <div class="mt-5 d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+
+                    <button
+                        class="btn btn-love btn-lg"
+                        (click)="scrollTo('gift')">
+
+                        🎁 Start the Surprise
+
+                    </button>
+
+                    <button
+                        class="btn btn-outline-love btn-lg"
+                        (click)="scrollTo('gallery')">
+
+                        📸 View Gallery
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+
+                <div class="hero-card">
+
+                    <div class="heart">
+
+                        ❤️
+
+                    </div>
+
+                    <h2>
+
+                        For Someone Special
+
+                    </h2>
+
+                    <p>
+
+                        May today bring happiness,
+                        laughter,
+                        beautiful memories
+                        and lots of smiles.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
