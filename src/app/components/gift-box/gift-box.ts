@@ -13,7 +13,7 @@ export class GiftBox {
   opened = false;
 
   openGift() {
-    this.opened = true;
+    this.opened = !this.opened;
   }
 
 }

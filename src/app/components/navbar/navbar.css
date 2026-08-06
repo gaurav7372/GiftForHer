@@ -1,78 +1,146 @@
-.custom-navbar{
+/* Smooth Scrolling */
+html{
+    scroll-behavior:smooth;
+}
 
-background:rgba(255,255,255,.25);
+/* Navbar */
+.navbar{
 
-backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.15);
 
-padding:15px 0;
+    backdrop-filter:blur(15px);
 
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+    -webkit-backdrop-filter:blur(15px);
 
-z-index:1000;
+    padding:12px 0;
+
+    transition:.3s;
+
+    z-index:9999;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
 
 }
+
+/* Logo */
 
 .logo{
 
-font-size:28px;
+    font-size:28px;
 
-font-weight:bold;
+    font-weight:700;
 
-color:#ff4d88;
+    color:#ff4d88 !important;
 
-text-decoration:none;
+    text-decoration:none;
 
 }
 
+/* Navigation Links */
+
 .nav-link{
 
-color:#444;
+    color:#e36abb !important;
 
-font-weight:600;
+    font-weight:600;
 
-margin-left:20px;
+    margin-left:20px;
 
-transition:.3s;
+    transition:.3s;
+
+    position:relative;
 
 }
 
 .nav-link:hover{
 
-color:#ff4d88;
+    color:#ffd1e6 !important;
 
 }
+
+/* Underline Animation */
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#ff4d88;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+/* Hamburger Button */
 
 .navbar-toggler{
 
-border:none;
+    border:none;
 
-font-size:28px;
+    box-shadow:none !important;
+
+}
+
+.navbar-toggler i{
+
+    color:#e36abb;
+
+    font-size:30px;
 
 }
 
-.navbar-toggler:focus{
-
-box-shadow:none;
-
-}
+/* Mobile */
 
 @media(max-width:991px){
 
 .navbar-collapse{
 
-margin-top:20px;
+    margin-top:15px;
 
-background:white;
+    padding:20px;
 
-padding:20px;
+    border-radius:20px;
 
-border-radius:20px;
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(20px);
+
+    text-align:center;
 
 }
 
 .nav-link{
 
-margin:10px 0;
+    margin:15px 0;
+
+    font-size:18px;
+
+}
+
+}
+
+/* Desktop */
+
+@media(min-width:992px){
+
+.navbar-nav{
+
+    align-items:center;
 
 }
 

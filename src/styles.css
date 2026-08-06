@@ -84,4 +84,9 @@ section{
 padding:70px 0;
 }
 
+
+
+html {
+  scroll-behavior: smooth;
+}
 }

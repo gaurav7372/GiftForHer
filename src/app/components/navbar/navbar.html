@@ -1,16 +1,19 @@
-<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+<nav class="navbar navbar-expand-lg fixed-top">
 
   <div class="container">
 
-    <a class="navbar-brand logo" href="#">
-      💖 For You
+    <a class="navbar-brand logo" href="#home" (click)="closeNavbar()">
+      Happy Birthday Shivani ❤️
     </a>
 
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarMenu">
+      data-bs-target="#navbarMenu"
+      aria-controls="navbarMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
 
       <i class="bi bi-list"></i>
 
@@ -21,23 +24,33 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#home" (click)="closeNavbar()">
+            Home
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#gift">Gift</a>
+          <a class="nav-link" href="#gift" (click)="closeNavbar()">
+            Gift
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#gallery">Gallery</a>
+          <a class="nav-link" href="#gallery" (click)="closeNavbar()">
+            Gallery
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#timeline">Timeline</a>
+          <a class="nav-link" href="#timeline" (click)="closeNavbar()">
+            Timeline
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#surprise">Surprise</a>
+          <a class="nav-link" href="#surprise" (click)="closeNavbar()">
+            Surprise
+          </a>
         </li>
 
       </ul>

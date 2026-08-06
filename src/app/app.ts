@@ -9,6 +9,7 @@ import { Timeline } from './components/timeline/timeline';
 import { Reasons } from './components/reasons/reasons';
 import { Quotes } from './components/quotes/quotes';
 import { Surprise } from './components/surprise/surprise';
+import { MusicPlayer } from './components/music-player/music-player';
 import { Footer } from './components/footer/footer';
 
 @Component({
@@ -24,7 +25,8 @@ import { Footer } from './components/footer/footer';
     Reasons,
     Quotes,
     Surprise,
-    Footer
+    Footer,
+      MusicPlayer
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
