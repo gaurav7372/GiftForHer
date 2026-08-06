@@ -1,0 +1,37 @@
+<section id="timeline" class="timeline-section">
+
+    <div class="container">
+
+        <h2 class="section-title gradient-text">
+            ❤️ Our Journey
+        </h2>
+
+        <div class="timeline">
+
+            <div
+                class="timeline-item"
+                *ngFor="let event of events; let i = index"
+                [class.left]="i % 2 == 0"
+                [class.right]="i % 2 != 0">
+
+                <div class="timeline-card glass">
+
+                    <div class="icon">
+                        {{event.icon}}
+                    </div>
+
+                    <h3>{{event.title}}</h3>
+
+                    <h6>{{event.date}}</h6>
+
+                    <p>{{event.description}}</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

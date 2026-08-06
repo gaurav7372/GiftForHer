@@ -1,0 +1,33 @@
+<section id="gallery" class="gallery-section">
+
+    <div class="container">
+
+        <h2 class="section-title gradient-text">
+            📸 Beautiful Memories
+        </h2>
+
+        <p class="gallery-text">
+            Every picture tells a beautiful story.
+        </p>
+
+        <div class="row g-4">
+
+            <div
+                class="col-6 col-md-4"
+                *ngFor="let image of images">
+
+                <div class="gallery-card">
+
+                    <img
+                        [src]="image"
+                        class="img-fluid">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,45 @@
+<section id="quotes" class="quotes-section">
+
+    <div class="container">
+
+        <h2 class="section-title gradient-text">
+            💌 Sweet Wishes
+        </h2>
+
+        <p class="text-center mb-5">
+            A few little messages just for you ❤️
+        </p>
+
+        <div class="row g-4">
+
+            <div
+                class="col-lg-4 col-md-6"
+                *ngFor="let quote of quotes">
+
+                <div class="quote-card glass">
+
+                    <div class="quote-icon">
+                        💖
+                    </div>
+
+                    <p class="quote-text">
+
+                        "{{quote.text}}"
+
+                    </p>
+
+                    <h5>
+
+                        {{quote.author}}
+
+                    </h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

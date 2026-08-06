@@ -1,0 +1,91 @@
+.reasons-section{
+
+padding:120px 0;
+
+background:linear-gradient(180deg,#fff,#ffe8f2);
+
+}
+
+.reason-card{
+
+padding:30px;
+
+text-align:center;
+
+border-radius:25px;
+
+transition:.4s;
+
+height:100%;
+
+cursor:pointer;
+
+}
+
+.reason-card:hover{
+
+transform:translateY(-12px) scale(1.04);
+
+box-shadow:0 20px 40px rgba(255,77,136,.25);
+
+}
+
+.emoji{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+animation:floating 4s infinite;
+
+}
+
+.reason-card h5{
+
+color:#ff4d88;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+}
+
+.reason-card p{
+
+color:#666;
+
+font-size:15px;
+
+line-height:1.7;
+
+margin-bottom:0;
+
+}
+
+@media(max-width:768px){
+
+.reason-card{
+
+padding:20px;
+
+}
+
+.emoji{
+
+font-size:42px;
+
+}
+
+.reason-card h5{
+
+font-size:18px;
+
+}
+
+.reason-card p{
+
+font-size:13px;
+
+}
+
+}

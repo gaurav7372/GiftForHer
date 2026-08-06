@@ -1,0 +1,57 @@
+<section id="gift" class="gift-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            🎁 A Special Gift
+        </h2>
+
+        <p class="gift-text">
+            Tap the gift below to discover a surprise made especially for you.
+        </p>
+
+        <div
+            class="gift-wrapper"
+            (click)="openGift()">
+
+            <div
+                class="gift"
+                [class.open]="opened">
+
+                <div class="lid"></div>
+
+                <div class="box"></div>
+
+                <div class="ribbon-v"></div>
+
+                <div class="ribbon-h"></div>
+
+            </div>
+
+        </div>
+
+        <div
+            class="message-card glass mt-5"
+            *ngIf="opened">
+
+            <h2>💖 Surprise!</h2>
+
+            <p>
+
+                Every smile of yours is precious.
+
+                Thank you for being an amazing person.
+
+                I hope this little website makes you smile today.
+
+            </p>
+
+            <button class="btn btn-love mt-3">
+                🌸 Continue
+            </button>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,108 @@
+<section id="surprise" class="surprise-section">
+
+  <div class="container text-center">
+
+    <h1 class="display-3 text-white mb-4">
+      💖 One Last Surprise 💖
+    </h1>
+
+    <p class="lead text-light">
+      Before you leave...
+      there is something I want to tell you.
+    </p>
+
+    <button
+      *ngIf="!showMessage"
+      class="btn btn-love btn-lg mt-5"
+      (click)="reveal()">
+
+      🎁 Open My Letter
+
+    </button>
+
+    <div
+      class="letter"
+      *ngIf="showMessage">
+
+      <div class="letter-header">
+
+        💌 Dear My Amazing Friend 💌
+
+      </div>
+
+      <div class="letter-body">
+
+        <p>
+
+          Dear <strong>Shivani</strong>,
+
+        </p>
+
+        <p>
+
+          I don't know if you expected something like this,
+          but I wanted to create something different.
+
+        </p>
+
+        <p>
+
+          Every friendship is special,
+          and ours means a lot to me.
+
+        </p>
+
+        <p>
+
+          You have a beautiful smile,
+          a kind heart,
+          and a personality that makes people comfortable.
+
+        </p>
+
+        <p>
+
+          Thank you for always being yourself.
+
+        </p>
+
+        <p>
+
+          I don't want anything in return.
+
+          I simply wanted to make something
+          that could remind you how wonderful you are.
+
+        </p>
+
+        <p>
+
+          Whenever you feel sad,
+          remember there are people
+          who genuinely appreciate you.
+
+        </p>
+
+        <p>
+
+          Keep smiling.
+
+          Keep dreaming.
+
+          Keep shining.
+
+        </p>
+
+        <h3>
+
+          ❤️ Thank you for being my friend & Love you So Much❤️
+
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
