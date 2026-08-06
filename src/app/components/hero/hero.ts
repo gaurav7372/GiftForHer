@@ -2,8 +2,22 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
+  standalone: true,
   imports: [],
   templateUrl: './hero.html',
-  styleUrl: './hero.css',
+  styleUrl: './hero.css'
 })
-export class Hero {}
+export class Hero {
+
+  scrollToGift() {
+    const section = document.getElementById('gift');
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+
+}

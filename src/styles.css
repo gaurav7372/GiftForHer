@@ -85,8 +85,12 @@ padding:70px 0;
 }
 
 
+}
+
+section {
+  scroll-margin-top: 90px; /* Adjust to match your navbar height */
+}
 
 html {
   scroll-behavior: smooth;
-}
 }
