@@ -1,234 +1,233 @@
 /* =========================================
-   PINK BIRTHDAY VAULT LOGIN
-   Matches your website's pink theme
+   GLOBAL LOGIN PAGE
 ========================================= */
 
-.vault-page {
-  position: fixed;
-  inset: 0;
+:host {
+  display: block;
+
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
+
+  overflow: hidden;
+
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================
+   MAIN BACKGROUND
+========================================= */
+
+.login-page {
+
+  width: 100%;
+  height: 100vh;
+
+  min-height: 100vh;
+
   overflow: hidden;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  padding: 15px;
+  position: relative;
+
+  padding: 20px;
+
   box-sizing: border-box;
 
   background:
     radial-gradient(
       circle at 15% 20%,
-      rgba(255, 77, 136, 0.22),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 85% 80%,
-      rgba(255, 196, 221, 0.35),
+      rgba(255, 122, 165, 0.18),
       transparent 35%
     ),
+
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 196, 221, 0.25),
+      transparent 35%
+    ),
+
     linear-gradient(
       135deg,
-      #fff0f6,
-      #ffd9e8,
-      #ffeef6
+      #fff0f6 0%,
+      #ffd9e8 50%,
+      #ffeef6 100%
     );
+
 }
 
 
 /* =========================================
-   STARS
+   FLOATING SYMBOLS
 ========================================= */
 
-.stars {
-  position: absolute;
+.floating-symbols {
+
+  position: fixed;
+
   inset: 0;
+
+  width: 100%;
+  height: 100%;
+
   overflow: hidden;
+
   pointer-events: none;
+
+  z-index: 0;
+
 }
 
-.stars span {
+
+.floating-symbols span {
+
   position: absolute;
+
+  bottom: -40px;
+
   color: #ff4d88;
-  opacity: 0.45;
-  animation: twinkle 3s infinite ease-in-out;
-}
 
-.stars span:nth-child(1) {
-  left: 8%;
-  top: 15%;
-  font-size: 20px;
-}
-
-.stars span:nth-child(2) {
-  left: 25%;
-  top: 8%;
-  animation-delay: 1s;
-}
-
-.stars span:nth-child(3) {
-  left: 42%;
-  top: 18%;
-  font-size: 12px;
-  animation-delay: 2s;
-}
-
-.stars span:nth-child(4) {
-  right: 12%;
-  top: 12%;
   font-size: 22px;
-  animation-delay: 0.5s;
+
+  opacity: 0;
+
+  animation:
+    floatUp 10s linear infinite;
+
 }
 
-.stars span:nth-child(5) {
-  right: 25%;
-  top: 30%;
-  animation-delay: 1.5s;
+
+/* Individual positions */
+
+.floating-symbols span:nth-child(1) {
+  left: 8%;
+  animation-delay: 0s;
 }
 
-.stars span:nth-child(6) {
-  left: 12%;
-  bottom: 20%;
-  font-size: 14px;
+.floating-symbols span:nth-child(2) {
+  left: 18%;
   animation-delay: 2s;
 }
 
-.stars span:nth-child(7) {
-  right: 8%;
-  bottom: 20%;
-  font-size: 20px;
-}
-
-.stars span:nth-child(8) {
+.floating-symbols span:nth-child(3) {
   left: 30%;
-  bottom: 12%;
-  color: #ff4d88;
-  font-size: 25px;
-}
-
-.stars span:nth-child(9) {
-  right: 35%;
-  bottom: 18%;
-  animation-delay: 1s;
-}
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(0.8);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
-
-
-/* =========================================
-   FLOATING HEARTS
-========================================= */
-
-.floating-heart {
-  position: absolute;
-  pointer-events: none;
-
-  animation: floatHeart 7s ease-in-out infinite;
-
-  opacity: 0.75;
-}
-
-.heart-one {
-  left: 7%;
-  bottom: 10%;
-  font-size: 30px;
-}
-
-.heart-two {
-  right: 8%;
-  top: 18%;
-  font-size: 25px;
-  animation-delay: 2s;
-}
-
-.heart-three {
-  right: 13%;
-  bottom: 12%;
-  font-size: 32px;
   animation-delay: 4s;
 }
 
-.heart-four {
-  left: 10%;
-  top: 22%;
-  font-size: 25px;
+.floating-symbols span:nth-child(4) {
+  left: 42%;
   animation-delay: 1s;
 }
 
-@keyframes floatHeart {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-5deg);
+.floating-symbols span:nth-child(5) {
+  left: 55%;
+  animation-delay: 5s;
+}
+
+.floating-symbols span:nth-child(6) {
+  left: 65%;
+  animation-delay: 3s;
+}
+
+.floating-symbols span:nth-child(7) {
+  left: 77%;
+  animation-delay: 6s;
+}
+
+.floating-symbols span:nth-child(8) {
+  left: 88%;
+  animation-delay: 2.5s;
+}
+
+.floating-symbols span:nth-child(9) {
+  left: 95%;
+  animation-delay: 7s;
+}
+
+
+@keyframes floatUp {
+
+  0% {
+
+    transform:
+      translateY(0)
+      rotate(0deg);
+
+    opacity: 0;
+
   }
 
-  50% {
-    transform: translateY(-18px) rotate(5deg);
+  15% {
+
+    opacity: 0.5;
+
   }
+
+  80% {
+
+    opacity: 0.5;
+
+  }
+
+  100% {
+
+    transform:
+      translateY(-110vh)
+      rotate(360deg);
+
+    opacity: 0;
+
+  }
+
 }
 
 
 /* =========================================
-   MAIN CARD
+   LOGIN CARD
 ========================================= */
 
-.vault-card {
-  width: min(430px, 94vw);
+.login-card {
 
-  max-height: calc(100dvh - 30px);
+  width: min(440px, 100%);
 
-  box-sizing: border-box;
+  max-height: calc(100vh - 40px);
 
-  padding:
-    clamp(16px, 3vh, 28px)
-    clamp(16px, 4vw, 28px);
+  position: relative;
+
+  z-index: 5;
 
   overflow: hidden;
 
+  padding: 28px 34px 24px;
+
+  box-sizing: border-box;
+
   text-align: center;
 
-  position: relative;
-  z-index: 5;
-
-  border-radius: 30px;
-
-  border: 1px solid rgba(255, 77, 136, 0.18);
-
   background:
-    rgba(255, 255, 255, 0.78);
+    rgba(255, 255, 255, 0.88);
 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  border:
+    1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 28px;
 
   box-shadow:
     0 25px 70px rgba(255, 77, 136, 0.18),
-    0 8px 25px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
-  animation: vaultAppear 0.8s ease;
-}
+    0 8px 25px rgba(0, 0, 0, 0.06);
 
-@keyframes vaultAppear {
-  from {
-    opacity: 0;
-    transform: scale(0.92) translateY(20px);
-  }
+  backdrop-filter: blur(18px);
 
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
 }
 
 
@@ -237,89 +236,123 @@
 ========================================= */
 
 .top-line {
-  width: 55px;
+
+  width: 70px;
+
   height: 4px;
 
   margin: 0 auto 12px;
 
-  border-radius: 20px;
+  border-radius: 50px;
 
-  background: #ff4d88;
+  background:
+    linear-gradient(
+      90deg,
+      #ff7aa5,
+      #ff4d88,
+      #ff9cbd
+    );
 
-  box-shadow:
-    0 0 15px rgba(255, 77, 136, 0.45);
 }
 
 
 /* =========================================
-   LOCK ICON
+   LOCK
 ========================================= */
 
 .lock-icon {
-  width: clamp(52px, 9vh, 70px);
-  height: clamp(52px, 9vh, 70px);
 
-  margin: auto;
+  width: 58px;
+
+  height: 58px;
+
+  margin: 0 auto 8px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 50%;
 
-  font-size: clamp(27px, 5vh, 38px);
+  font-size: 28px;
 
   background:
     linear-gradient(
       135deg,
-      #ff4d88,
-      #ff7aa5
+      #ffe0ec,
+      #ffd0e2
     );
 
-  border: 5px solid #ffe1ec;
-
   box-shadow:
-    0 10px 30px rgba(255, 77, 136, 0.3);
+    0 8px 25px rgba(255, 77, 136, 0.15);
+
+  animation: lockFloat 3s ease-in-out infinite;
+
+}
+
+
+@keyframes lockFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
 }
 
 
 /* =========================================
-   LABEL
+   PRIVATE LABEL
 ========================================= */
 
 .secret-label {
-  margin-top: 10px;
 
   color: #ff4d88;
 
-  font-size: clamp(0.55rem, 1.5vh, 0.7rem);
+  font-size: 10px;
+
+  font-weight: 800;
 
   letter-spacing: 2px;
 
-  font-weight: 700;
+  margin-top: 6px;
+
 }
 
 
 /* =========================================
-   TITLE
+   HEADING
 ========================================= */
 
-.vault-card h1 {
-  margin: 6px 0;
+.login-card h1 {
+
+  margin: 8px 0 5px;
 
   color: #333;
 
-  font-size: clamp(1.45rem, 4vh, 2rem);
+  font-size: 34px;
 
-  line-height: 1.1;
+  line-height: 1.05;
 
   font-weight: 800;
+
 }
 
-.vault-card h1 span {
+
+.login-card h1 span {
+
   display: block;
 
   color: #ff4d88;
+
+  font-size: 32px;
+
 }
 
 
@@ -328,66 +361,144 @@
 ========================================= */
 
 .intro {
-  margin: 5px auto 12px;
 
-  max-width: 330px;
+  margin: 8px auto 10px;
+
+  max-width: 350px;
 
   color: #777;
 
-  font-size: clamp(0.68rem, 1.7vh, 0.82rem);
+  font-size: 12px;
 
   line-height: 1.5;
+
 }
 
 
 /* =========================================
-   PIN
+   PIN TIMER
 ========================================= */
 
-.pin-label {
-  margin: 5px 0 7px;
+.pin-timer {
 
-  color: #999;
+  display: inline-flex;
 
-  font-size: 0.62rem;
-
-  letter-spacing: 2px;
-
-  font-weight: 700;
-}
-
-.pin-dots {
-  display: flex;
+  align-items: center;
 
   justify-content: center;
 
-  gap: 13px;
+  gap: 4px;
 
-  margin-bottom: 8px;
+  margin: 5px auto 8px;
+
+  padding: 6px 14px;
+
+  border:
+    1px solid rgba(255, 77, 136, 0.18);
+
+  border-radius: 50px;
+
+  background:
+    rgba(255, 77, 136, 0.07);
+
+  color: #d95b83;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+
 }
 
+
+.pin-timer strong {
+
+  color: #ff4d88;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  font-variant-numeric: tabular-nums;
+
+}
+
+
+/* =========================================
+   PIN AREA
+========================================= */
+
+.pin-area {
+
+  margin-top: 5px;
+
+}
+
+
+.pin-label {
+
+  margin: 0 0 8px;
+
+  color: #999;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+}
+
+
+/* =========================================
+   PIN DOTS
+========================================= */
+
+.pin-dots {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  height: 20px;
+
+}
+
+
 .pin-dots span {
-  width: clamp(10px, 2vh, 14px);
-  height: clamp(10px, 2vh, 14px);
+
+  width: 10px;
+
+  height: 10px;
 
   border-radius: 50%;
 
-  border: 2px solid #ffc4d9;
+  background: #f5dce6;
 
-  background: transparent;
+  border: 2px solid #f2cbd9;
 
-  transition: 0.2s;
+  box-sizing: border-box;
+
+  transition:
+    all 0.2s ease;
+
 }
 
+
 .pin-dots span.active {
+
   background: #ff4d88;
 
   border-color: #ff4d88;
 
-  box-shadow:
-    0 0 15px rgba(255, 77, 136, 0.45);
+  transform: scale(1.15);
 
-  transform: scale(1.1);
+  box-shadow:
+    0 3px 10px rgba(255, 77, 136, 0.3);
+
 }
 
 
@@ -396,42 +507,43 @@
 ========================================= */
 
 .cute-error {
-  padding: 7px 12px;
 
-  margin: 4px auto 7px;
+  min-height: 17px;
 
-  width: fit-content;
+  margin: 3px auto 4px;
 
-  max-width: 90%;
+  padding: 2px 10px;
 
-  border-radius: 18px;
+  color: #e83e75;
 
-  color: #e83e72;
-
-  background: #fff0f6;
-
-  border: 1px solid #ffc4d9;
-
-  font-size: clamp(0.62rem, 1.6vh, 0.76rem);
+  font-size: 10px;
 
   font-weight: 700;
 
-  animation: shake 0.35s ease;
+  animation:
+    errorPop 0.25s ease;
+
 }
 
-@keyframes shake {
-  0%,
+
+@keyframes errorPop {
+
+  0% {
+
+    opacity: 0;
+
+    transform: scale(0.9);
+
+  }
+
   100% {
-    transform: translateX(0);
+
+    opacity: 1;
+
+    transform: scale(1);
+
   }
 
-  25% {
-    transform: translateX(-5px);
-  }
-
-  75% {
-    transform: translateX(5px);
-  }
 }
 
 
@@ -440,61 +552,91 @@
 ========================================= */
 
 .keypad {
-  width: min(255px, 75vw);
 
-  margin: 0 auto 10px;
+  width: 210px;
+
+  margin: 4px auto 8px;
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
   gap: 6px;
+
 }
 
+
 .keypad button {
-  height: clamp(34px, 6vh, 45px);
 
-  border-radius: 13px;
+  width: 100%;
 
-  border: 1px solid #ffd1e0;
+  height: 39px;
 
-  background: #fff7fa;
+  border: none;
 
-  color: #444;
+  border-radius: 12px;
 
-  font-size: clamp(0.85rem, 2.4vh, 1.1rem);
+  background: #fff;
+
+  color: #555;
+
+  font-size: 17px;
 
   font-weight: 700;
 
   cursor: pointer;
 
-  transition: 0.15s;
+  box-shadow:
+    0 4px 12px rgba(255, 77, 136, 0.08);
 
-  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+
 }
 
+
 .keypad button:hover {
-  background: #ffe5ef;
+
+  background: #fff0f6;
 
   color: #ff4d88;
 
   transform: translateY(-2px);
 
-  border-color: #ffabc5;
+  box-shadow:
+    0 7px 16px rgba(255, 77, 136, 0.14);
+
 }
+
 
 .keypad button:active {
-  transform: scale(0.92);
 
-  background: #ffd6e4;
+  transform: scale(0.94);
+
 }
 
-.keypad .empty {
+
+.keypad button.empty {
+
   visibility: hidden;
+
+  pointer-events: none;
+
 }
 
-.keypad .delete {
+
+.keypad button.delete {
+
   color: #ff4d88;
+
+  font-size: 21px;
+
+  background: #fff0f6;
+
 }
 
 
@@ -503,250 +645,493 @@
 ========================================= */
 
 .unlock-button {
-  width: min(255px, 75vw);
 
-  height: clamp(40px, 6.5vh, 50px);
+  width: 100%;
+
+  height: 42px;
+
+  margin-top: 3px;
 
   border: none;
 
-  border-radius: 30px;
-
-  color: white;
-
-  font-size: clamp(0.68rem, 1.7vh, 0.82rem);
-
-  font-weight: 800;
-
-  letter-spacing: 0.5px;
+  border-radius: 14px;
 
   background:
     linear-gradient(
       135deg,
-      #ff4d88,
-      #ff7aa5
+      #ff7aa5,
+      #ff4d88
     );
 
-  box-shadow:
-    0 10px 30px rgba(255, 77, 136, 0.3);
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
 
   cursor: pointer;
 
-  transition: 0.2s;
+  box-shadow:
+    0 8px 20px rgba(255, 77, 136, 0.28);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
 }
 
-.unlock-button:hover {
+
+.unlock-button:hover:not(:disabled) {
+
   transform: translateY(-2px);
 
   box-shadow:
-    0 14px 35px rgba(255, 77, 136, 0.4);
+    0 12px 25px rgba(255, 77, 136, 0.35);
+
 }
 
-.unlock-button:active {
-  transform: scale(0.97);
+
+.unlock-button:active:not(:disabled) {
+
+  transform: scale(0.98);
+
 }
+
 
 .unlock-button:disabled {
-  opacity: 0.65;
+
+  opacity: 0.75;
 
   cursor: not-allowed;
+
 }
 
 
 /* =========================================
-   NOTE
+   PERSONAL NOTE
 ========================================= */
 
 .secret-note {
-  margin: 10px auto 6px;
-
-  padding: 9px 11px;
 
   display: flex;
 
-  gap: 8px;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin-top: 10px;
+
+  padding: 9px 11px;
 
   text-align: left;
 
-  border-radius: 14px;
+  border:
+    1px solid rgba(255, 122, 165, 0.25);
 
-  background: #fff5f9;
+  border-radius: 13px;
 
-  border: 1px solid #ffd6e4;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 240, 246, 0.9),
+      rgba(255, 229, 239, 0.8)
+    );
 
-  box-shadow:
-    0 5px 15px rgba(255, 77, 136, 0.06);
 }
+
 
 .note-pin {
-  font-size: 16px;
+
+  flex-shrink: 0;
+
+  font-size: 15px;
+
 }
 
-.secret-note strong {
-  color: #ff4d88;
 
-  font-size: clamp(0.65rem, 1.6vh, 0.78rem);
+.note-content {
+
+  min-width: 0;
+
 }
 
-.secret-note p {
+
+.note-content strong {
+
+  display: block;
+
+  color: #e34f7e;
+
+  font-size: 10px;
+
+  line-height: 1.2;
+
+}
+
+
+.note-content p {
+
   margin: 3px 0 0;
 
   color: #777;
 
-  font-size: clamp(0.52rem, 1.35vh, 0.65rem);
+  font-size: 8.5px;
 
   line-height: 1.35;
+
 }
 
 
 /* =========================================
-   FOOTER
+   DESKTOP
 ========================================= */
 
-.made-with {
-  margin-top: 5px;
+@media (min-width: 769px) {
 
-  color: #bbb;
+  .login-card {
 
-  font-size: 0.58rem;
+    padding-left: 38px;
+
+    padding-right: 38px;
+
+  }
+
 }
 
 
 /* =========================================
-   SMALL PHONES
+   TABLET
 ========================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 768px) {
 
-  .vault-page {
-    padding: 7px;
+  .login-page {
+
+    padding: 15px;
+
   }
 
-  .vault-card {
-    padding: 11px 12px;
 
-    border-radius: 24px;
+  .login-card {
+
+    width: min(420px, 100%);
+
+    padding:
+      24px
+      28px
+      20px;
+
   }
 
-  .secret-note {
-    padding: 7px 9px;
+
+  .login-card h1 {
+
+    font-size: 31px;
+
   }
 
-  .keypad {
-    gap: 4px;
+
+  .login-card h1 span {
+
+    font-size: 29px;
+
   }
 
-  .keypad button {
-    height: 32px;
-  }
-
-  .unlock-button {
-    height: 37px;
-  }
 }
 
 
 /* =========================================
-   SHORT PHONES
+   MOBILE
 ========================================= */
 
-@media (max-width: 600px) and (max-height: 680px) {
+@media (max-width: 480px) {
 
-  .vault-card {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .login-page {
+
+    padding: 10px;
+
   }
+
+
+  .login-card {
+
+    width: 100%;
+
+    max-height:
+      calc(100vh - 20px);
+
+    padding:
+      18px
+      18px
+      15px;
+
+    border-radius: 22px;
+
+  }
+
+
+  .top-line {
+
+    width: 55px;
+
+    height: 3px;
+
+    margin-bottom: 8px;
+
+  }
+
 
   .lock-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
+
+    width: 46px;
+
+    height: 46px;
+
+    font-size: 23px;
+
   }
 
-  .secret-note {
+
+  .secret-label {
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+  }
+
+
+  .login-card h1 {
+
     margin-top: 6px;
+
+    font-size: 26px;
+
   }
 
-  .made-with {
-    display: none;
-  }
-}
 
+  .login-card h1 span {
 
-/* =========================================
-   LANDSCAPE PHONE
-========================================= */
+    font-size: 25px;
 
-@media (max-height: 500px) and (orientation: landscape) {
-
-  .vault-card {
-    width: min(600px, 96vw);
-
-    padding: 8px 20px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    column-gap: 18px;
-
-    align-items: center;
   }
 
-  .top-line,
-  .lock-icon,
-  .secret-label,
-  .vault-card h1,
-  .intro,
-  .pin-area,
-  .cute-error {
-    grid-column: 1 / -1;
-  }
-
-  .lock-icon {
-    width: 38px;
-    height: 38px;
-
-    font-size: 21px;
-  }
 
   .intro {
-    margin-bottom: 3px;
+
+    margin-top: 6px;
+
+    font-size: 10px;
+
   }
+
+
+  .pin-timer {
+
+    margin-top: 4px;
+
+    padding: 5px 11px;
+
+    font-size: 9px;
+
+  }
+
+
+  .pin-timer strong {
+
+    font-size: 12px;
+
+  }
+
+
+  .pin-label {
+
+    font-size: 8px;
+
+    margin-bottom: 6px;
+
+  }
+
+
+  .pin-dots {
+
+    gap: 8px;
+
+  }
+
+
+  .pin-dots span {
+
+    width: 9px;
+
+    height: 9px;
+
+  }
+
+
+  .cute-error {
+
+    font-size: 9px;
+
+    min-height: 15px;
+
+  }
+
 
   .keypad {
-    width: 210px;
+
+    width: 190px;
+
+    gap: 5px;
+
   }
+
 
   .keypad button {
-    height: 30px;
+
+    height: 35px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
   }
+
+
+  .keypad button.delete {
+
+    font-size: 19px;
+
+  }
+
 
   .unlock-button {
-    width: 210px;
-    height: 34px;
+
+    height: 38px;
+
+    border-radius: 12px;
+
+    font-size: 9px;
+
   }
+
 
   .secret-note {
-    margin: 0;
+
+    margin-top: 8px;
+
+    padding: 7px 9px;
+
+    gap: 7px;
+
   }
 
-  .made-with {
-    display: none;
+
+  .note-pin {
+
+    font-size: 13px;
+
   }
+
+
+  .note-content strong {
+
+    font-size: 9px;
+
+  }
+
+
+  .note-content p {
+
+    font-size: 7.5px;
+
+    line-height: 1.3;
+
+  }
+
 }
 
 
 /* =========================================
-   REDUCED MOTION
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+  .login-card {
+
+    padding:
+      14px
+      14px
+      12px;
+
+  }
+
+
+  .login-card h1 {
+
+    font-size: 23px;
+
+  }
+
+
+  .login-card h1 span {
+
+    font-size: 22px;
+
+  }
+
+
+  .intro {
+
+    font-size: 9px;
+
+  }
+
+
+  .keypad {
+
+    width: 175px;
+
+  }
+
+
+  .keypad button {
+
+    height: 32px;
+
+  }
+
+
+  .secret-note {
+
+    padding: 6px 8px;
+
+  }
+
+
+  .note-content p {
+
+    font-size: 7px;
+
+  }
+
+}
+
+
+/* =========================================
+   REDUCE ANIMATIONS IF REQUESTED
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
+  .floating-symbols span,
+  .lock-icon {
 
-    transition: none !important;
+    animation: none;
+
   }
+
 }
