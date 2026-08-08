@@ -1,0 +1,372 @@
+<!-- =========================================
+     LOGIN / SECRET PAGE
+========================================= -->
+
+<div class="vault-page">
+
+  <!-- =========================================
+       BACKGROUND DECORATIONS
+  ========================================== -->
+
+  <div class="stars">
+
+    <span>✦</span>
+    <span>✧</span>
+    <span>⋆</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>⋆</span>
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+
+  </div>
+
+
+  <div class="floating-heart heart-one">
+    💖
+  </div>
+
+  <div class="floating-heart heart-two">
+    💕
+  </div>
+
+  <div class="floating-heart heart-three">
+    💗
+  </div>
+
+  <div class="floating-heart heart-four">
+    🌸
+  </div>
+
+
+  <!-- =========================================
+       MAIN CARD
+  ========================================== -->
+
+  <div class="vault-card">
+
+    <!-- Top decoration -->
+
+    <div class="top-line"></div>
+
+
+    <!-- Lock -->
+
+    <div class="lock-icon">
+
+      🔐
+
+    </div>
+
+
+    <!-- Private label -->
+
+    <div class="secret-label">
+
+      PRIVATE &nbsp;•&nbsp; FOR SHIVANI
+
+    </div>
+
+
+    <!-- Heading -->
+
+    <h1>
+
+      A Secret
+
+      <span>
+        For You
+      </span>
+
+    </h1>
+
+
+    <!-- Introduction -->
+
+    <p class="intro">
+
+      Someone has prepared a little
+      birthday surprise...
+
+      <br>
+
+      But first, you need the secret code. 💌
+
+    </p>
+
+
+    <!-- =========================================
+         PIN AREA
+    ========================================== -->
+
+    <div class="pin-area">
+
+      <p class="pin-label">
+
+        ENTER SECRET CODE
+
+      </p>
+
+
+      <div class="pin-dots">
+
+        <span
+          [class.active]="pin.length >= 1">
+        </span>
+
+        <span
+          [class.active]="pin.length >= 2">
+        </span>
+
+        <span
+          [class.active]="pin.length >= 3">
+        </span>
+
+        <span
+          [class.active]="pin.length >= 4">
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         ERROR MESSAGE
+    ========================================== -->
+
+    <div
+      class="cute-error"
+      *ngIf="errorMessage">
+
+      {{ errorMessage }}
+
+    </div>
+
+
+    <!-- =========================================
+         NUMBER KEYPAD
+    ========================================== -->
+
+    <div class="keypad">
+
+      <!-- 1 -->
+
+      <button
+        type="button"
+        (click)="addDigit('1')">
+
+        1
+
+      </button>
+
+
+      <!-- 2 -->
+
+      <button
+        type="button"
+        (click)="addDigit('2')">
+
+        2
+
+      </button>
+
+
+      <!-- 3 -->
+
+      <button
+        type="button"
+        (click)="addDigit('3')">
+
+        3
+
+      </button>
+
+
+      <!-- 4 -->
+
+      <button
+        type="button"
+        (click)="addDigit('4')">
+
+        4
+
+      </button>
+
+
+      <!-- 5 -->
+
+      <button
+        type="button"
+        (click)="addDigit('5')">
+
+        5
+
+      </button>
+
+
+      <!-- 6 -->
+
+      <button
+        type="button"
+        (click)="addDigit('6')">
+
+        6
+
+      </button>
+
+
+      <!-- 7 -->
+
+      <button
+        type="button"
+        (click)="addDigit('7')">
+
+        7
+
+      </button>
+
+
+      <!-- 8 -->
+
+      <button
+        type="button"
+        (click)="addDigit('8')">
+
+        8
+
+      </button>
+
+
+      <!-- 9 -->
+
+      <button
+        type="button"
+        (click)="addDigit('9')">
+
+        9
+
+      </button>
+
+
+      <!-- Empty -->
+
+      <button
+        type="button"
+        class="empty"
+        tabindex="-1"
+        aria-hidden="true">
+
+      </button>
+
+
+      <!-- 0 -->
+
+      <button
+        type="button"
+        (click)="addDigit('0')">
+
+        0
+
+      </button>
+
+
+      <!-- Delete -->
+
+      <button
+        type="button"
+        class="delete"
+        (click)="deleteDigit()">
+
+        ←
+
+      </button>
+
+    </div>
+
+
+    <!-- =========================================
+         ENTER / UNLOCK BUTTON
+    ========================================== -->
+
+    <button
+      type="button"
+      class="unlock-button"
+      (click)="enterPin()"
+      [disabled]="isLoading">
+
+      <span *ngIf="!isLoading">
+
+        ✨ UNLOCK MY SURPRISE
+
+      </span>
+
+
+      <span *ngIf="isLoading">
+
+        Opening your surprise... 💕
+
+      </span>
+
+    </button>
+
+
+    <!-- =========================================
+         PERSONAL NOTE
+    ========================================== -->
+
+    <div class="secret-note">
+
+      <div class="note-pin">
+
+        📌
+
+      </div>
+
+
+      <div>
+
+        <strong>
+
+          A little note for Shivani 💕
+
+        </strong>
+
+
+        <p>
+
+          Hi website me fakt tuzyasathi
+          banvali ahe ❤️
+
+          <br><br>
+
+          Jevha tula hi website baghaychi
+          asel tevha mala call kar,
+          mi PIN sangel 😜
+
+          <br><br>
+
+          But dusryanna dakhvaychi asel tar
+          ajibat call karu nkos 😂
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <!-- <div class="made-with">
+
+      Made with ❤️ by Garry
+
+    </div> -->
+
+  </div>
+
+</div>

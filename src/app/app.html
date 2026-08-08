@@ -1,20 +1,41 @@
-<app-navbar></app-navbar>
+<!-- =========================================
+     LOGIN / PIN SCREEN
+========================================= -->
 
-<app-hero></app-hero>
+<app-login
+  *ngIf="!unlocked"
+  (unlocked)="unlockWebsite()">
+</app-login>
 
-<app-gift-box></app-gift-box>
 
-<app-message></app-message>
+<!-- =========================================
+     MAIN WEBSITE
+========================================= -->
 
-<app-gallery></app-gallery>
+<div
+  *ngIf="unlocked"
+  class="main-website">
 
-<app-timeline></app-timeline>
+  <app-navbar></app-navbar>
 
-<app-reasons></app-reasons>
+  <app-hero></app-hero>
 
-<app-quotes></app-quotes>
+  <app-gift-box></app-gift-box>
 
-<app-surprise></app-surprise>
+  <app-message></app-message>
 
-<app-footer></app-footer>
-<app-music-player></app-music-player>
+  <app-gallery></app-gallery>
+
+  <app-timeline></app-timeline>
+
+  <app-reasons></app-reasons>
+
+  <app-quotes></app-quotes>
+
+  <app-surprise></app-surprise>
+
+  <app-footer></app-footer>
+
+  <app-music-player></app-music-player>
+
+</div>

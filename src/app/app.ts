@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
+import { Login } from './components/login/login';
 import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
 import { GiftBox } from './components/gift-box/gift-box';
@@ -9,13 +11,17 @@ import { Timeline } from './components/timeline/timeline';
 import { Reasons } from './components/reasons/reasons';
 import { Quotes } from './components/quotes/quotes';
 import { Surprise } from './components/surprise/surprise';
-import { MusicPlayer } from './components/music-player/music-player';
 import { Footer } from './components/footer/footer';
+import { MusicPlayer } from './components/music-player/music-player';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+
   imports: [
+    CommonModule,
+
+    Login,
     Navbar,
     Hero,
     GiftBox,
@@ -26,9 +32,18 @@ import { Footer } from './components/footer/footer';
     Quotes,
     Surprise,
     Footer,
-      MusicPlayer
+    MusicPlayer
   ],
+
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+
+  unlocked = false;
+
+  unlockWebsite(): void {
+    this.unlocked = true;
+  }
+
+}
