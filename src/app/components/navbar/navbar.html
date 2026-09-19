@@ -2,10 +2,18 @@
 
   <div class="container">
 
-    <a class="navbar-brand logo" href="#home" (click)="closeNavbar()">
+    <!-- Logo -->
+    <a
+      class="navbar-brand logo"
+      href="javascript:void(0)"
+      (click)="scrollTo('home'); closeNavbar()">
+
       Happy Bday Shiw ❤️
+
     </a>
 
+
+    <!-- Mobile Toggle -->
     <button
       class="navbar-toggler"
       type="button"
@@ -19,38 +27,86 @@
 
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarMenu">
+
+    <!-- Navigation -->
+    <div
+      class="collapse navbar-collapse"
+      id="navbarMenu">
 
       <ul class="navbar-nav ms-auto">
 
+        <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link" href="#home" (click)="closeNavbar()">
+
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="scrollTo('home'); closeNavbar()">
+
             Home
+
           </a>
+
         </li>
 
+
+        <!-- Gift -->
         <li class="nav-item">
-          <a class="nav-link" href="#gift" (click)="closeNavbar()">
+
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="scrollTo('gift'); closeNavbar()">
+
             Gift
+
           </a>
+
         </li>
 
+
+        <!-- Gallery -->
         <li class="nav-item">
-          <a class="nav-link" href="#gallery" (click)="closeNavbar()">
+
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="scrollTo('gallery'); closeNavbar()">
+
             Gallery
+
           </a>
+
         </li>
 
+
+        <!-- Timeline -->
         <li class="nav-item">
-          <a class="nav-link" href="#timeline" (click)="closeNavbar()">
+
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="scrollTo('timeline'); closeNavbar()">
+
             Timeline
+
           </a>
+
         </li>
 
+
+        <!-- Surprise -->
         <li class="nav-item">
-          <a class="nav-link" href="#surprise" (click)="closeNavbar()">
+
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="scrollTo('surprise'); closeNavbar()">
+
             Surprise
+
           </a>
+
         </li>
 
       </ul>
