@@ -54,9 +54,14 @@
 
 
     <!-- Warning Icon -->
-    <div class="warning-icon">
-      ⚠️
-    </div>
+  <div
+  class="warning-icon"
+  (click)="openSecretLogin()"
+  role="button"
+  tabindex="0"
+  aria-label="Warning">
+  ⚠️
+</div>
 
 
     <!-- Small label -->
@@ -128,25 +133,7 @@
     </div>
 
 
-    <!-- ============================= -->
-    <!-- SECRET INVISIBLE BUTTON -->
-    <!-- ============================= -->
 
-    <!--
-      SECRET AREA
-
-      This button is completely invisible.
-
-      Click the bottom-right area of the card
-      to open the secret login page.
-    -->
-
-    <button
-      type="button"
-      class="secret-button"
-      aria-label="Secret access"
-      (click)="openSecretLogin()">
-    </button>
 
   </div>
 

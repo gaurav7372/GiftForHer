@@ -15,7 +15,15 @@ export class FakePage {
 
   @Output() openLogin = new EventEmitter<void>();
 
+  private warningClicks = 0;
+
   openSecretLogin(): void {
-    this.openLogin.emit();
+    this.warningClicks++;
+
+    // Open Login after 3 clicks on ⚠️
+    if (this.warningClicks >= 3) {
+      this.warningClicks = 0;
+      this.openLogin.emit();
+    }
   }
 }

@@ -556,27 +556,18 @@ h1 span {
 /* ========================================= */
 /* SECRET BUTTON */
 /* ========================================= */
+.warning-icon {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
 
-.secret-button {
+.warning-icon:hover {
+  transform: scale(1.08);
+}
 
-  position: absolute;
-
-  bottom: 15px;
-  right: 15px;
-
-  width: 40px;
-  height: 40px;
-
-  padding: 0;
-  margin: 0;
-
-  border: none;
-
-  background: transparent;
-
-  opacity: 0;
-
-  cursor: default;
+.warning-icon:active {
+  transform: scale(0.9);
 }
 
 
