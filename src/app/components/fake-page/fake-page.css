@@ -1,0 +1,857 @@
+/* ========================================= */
+/* MAIN PAGE */
+/* ========================================= */
+
+.fake-page {
+  width: 100%;
+  height: 100dvh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(130, 0, 0, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 0, 0, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #080808,
+      #160303,
+      #050505
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+}
+
+
+/* ========================================= */
+/* RED GLOW EFFECTS */
+/* ========================================= */
+
+.warning-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  opacity: 0.35;
+}
+
+.glow-one {
+  width: 450px;
+  height: 450px;
+
+  background: #ff0000;
+
+  top: -200px;
+  left: -180px;
+}
+
+.glow-two {
+  width: 500px;
+  height: 500px;
+
+  background: #b00000;
+
+  right: -220px;
+  bottom: -250px;
+}
+
+
+/* ========================================= */
+/* WARNING STRIP */
+/* ========================================= */
+
+.warning-strip {
+  position: absolute;
+
+  left: -5%;
+
+  width: 110%;
+
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+
+  overflow: hidden;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #ffcc00 0px,
+      #ffcc00 18px,
+      #111 18px,
+      #111 36px
+    );
+
+  color: #111;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  z-index: 2;
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.top-strip {
+  top: 0;
+}
+
+.bottom-strip {
+  bottom: 0;
+}
+
+
+/* ========================================= */
+/* PARTICLES */
+/* ========================================= */
+
+.warning-particles {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+.warning-particles span {
+  position: absolute;
+
+  color: #ff2020;
+
+  font-size: 20px;
+
+  opacity: 0.15;
+
+  animation: warningFloat 10s linear infinite;
+}
+
+.warning-particles span:nth-child(1) {
+  left: 8%;
+  bottom: -50px;
+  animation-delay: 0s;
+}
+
+.warning-particles span:nth-child(2) {
+  left: 20%;
+  bottom: -50px;
+  animation-delay: 2s;
+}
+
+.warning-particles span:nth-child(3) {
+  left: 35%;
+  bottom: -50px;
+  animation-delay: 5s;
+}
+
+.warning-particles span:nth-child(4) {
+  left: 48%;
+  bottom: -50px;
+  animation-delay: 1s;
+}
+
+.warning-particles span:nth-child(5) {
+  left: 62%;
+  bottom: -50px;
+  animation-delay: 7s;
+}
+
+.warning-particles span:nth-child(6) {
+  left: 75%;
+  bottom: -50px;
+  animation-delay: 3s;
+}
+
+.warning-particles span:nth-child(7) {
+  left: 88%;
+  bottom: -50px;
+  animation-delay: 6s;
+}
+
+.warning-particles span:nth-child(8) {
+  left: 55%;
+  bottom: -50px;
+  animation-delay: 9s;
+}
+
+
+/* ========================================= */
+/* MAIN CARD */
+/* ========================================= */
+
+.fake-card {
+  width: min(92%, 570px);
+
+  position: relative;
+
+  z-index: 10;
+
+  padding: 38px 38px 42px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 5, 5, 0.97),
+      rgba(8, 8, 8, 0.97)
+    );
+
+  border:
+
+    1px solid
+    rgba(255, 30, 30, 0.45);
+
+  border-radius: 18px;
+
+  box-shadow:
+
+    0 0 0 1px rgba(255, 0, 0, 0.08),
+
+    0 0 35px
+    rgba(255, 0, 0, 0.18),
+
+    0 30px 80px
+    rgba(0, 0, 0, 0.8);
+
+  animation: cardAppear 0.7s ease-out;
+}
+
+
+/* ========================================= */
+/* RED TOP LINE */
+/* ========================================= */
+
+.fake-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+
+  width: 80%;
+  height: 2px;
+
+  background: #ff1a1a;
+
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 25px #ff0000;
+
+}
+
+
+/* ========================================= */
+/* STATUS */
+/* ========================================= */
+
+.status-line {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 25px;
+
+  color: #ff4545;
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.status-dot {
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #ff1616;
+
+  box-shadow:
+    0 0 8px #ff0000,
+    0 0 18px #ff0000;
+
+  animation: statusPulse 1.2s infinite;
+}
+
+
+/* ========================================= */
+/* WARNING ICON */
+/* ========================================= */
+
+.warning-icon {
+
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 0, 0, 0.25),
+      rgba(80, 0, 0, 0.15)
+    );
+
+  border:
+    2px solid
+    rgba(255, 30, 30, 0.65);
+
+  font-size: 42px;
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.3),
+    inset 0 0 20px rgba(255, 0, 0, 0.1);
+
+  animation: warningPulse 2s infinite;
+}
+
+
+/* ========================================= */
+/* WARNING LABEL */
+/* ========================================= */
+
+.warning-label {
+
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  padding: 6px 14px;
+
+  border:
+
+    1px solid
+    rgba(255, 40, 40, 0.5);
+
+  border-radius: 4px;
+
+  color: #ff4141;
+
+  background:
+    rgba(255, 0, 0, 0.07);
+
+  font-size: 0.68rem;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================= */
+/* HEADING */
+/* ========================================= */
+
+h1 {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(2rem, 6vw, 3rem);
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  text-shadow:
+    0 0 20px
+    rgba(255, 0, 0, 0.35);
+}
+
+h1 span {
+  color: #ff2929;
+}
+
+
+/* ========================================= */
+/* DIVIDER */
+/* ========================================= */
+
+.divider {
+
+  width: 80px;
+  height: 3px;
+
+  margin: 20px auto;
+
+  background: #ff2020;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+
+/* ========================================= */
+/* MAIN MESSAGE */
+/* ========================================= */
+
+.main-message {
+
+  margin: 0 auto;
+
+  max-width: 440px;
+
+  color: #d5d5d5;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================= */
+/* REASON BOX */
+/* ========================================= */
+
+.reason-box {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 25px auto;
+
+  padding: 16px;
+
+  max-width: 450px;
+
+  text-align: left;
+
+  background:
+    rgba(255, 0, 0, 0.06);
+
+  border-left:
+
+    3px solid
+    #ff2020;
+
+  border-radius: 5px;
+
+  box-shadow:
+    inset 0 0 20px
+    rgba(255, 0, 0, 0.03);
+}
+
+.reason-icon {
+
+  font-size: 27px;
+
+  animation: dangerBlink 1.5s infinite;
+}
+
+.reason-text strong {
+
+  color: #ff3636;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 2px;
+}
+
+.reason-text p {
+
+  margin: 5px 0 0;
+
+  color: #bdbdbd;
+
+  font-size: 0.88rem;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================= */
+/* SUB MESSAGE */
+/* ========================================= */
+
+.sub-message {
+
+  margin-top: 25px;
+
+  color: #aaa;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+.sub-message strong {
+
+  color: #ff3535;
+
+  font-size: 1.05rem;
+
+  text-shadow:
+    0 0 12px rgba(255, 0, 0, 0.4);
+}
+
+
+/* ========================================= */
+/* SMALL NOTE */
+/* ========================================= */
+
+.small-note {
+
+  margin-top: 25px;
+
+  color: #666;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ========================================= */
+/* SECRET BUTTON */
+/* ========================================= */
+
+.secret-button {
+
+  position: absolute;
+
+  bottom: 15px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  background: transparent;
+
+  opacity: 0;
+
+  cursor: default;
+}
+
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+.footer {
+
+  position: absolute;
+
+  bottom: 43px;
+
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  color: #4d4d4d;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 1px;
+
+  z-index: 5;
+}
+
+
+/* ========================================= */
+/* ANIMATIONS */
+/* ========================================= */
+
+@keyframes statusPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.35;
+    transform: scale(0.7);
+  }
+}
+
+
+@keyframes warningPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 0 20px rgba(255, 0, 0, 0.25);
+  }
+
+  50% {
+    transform: scale(1.04);
+
+    box-shadow:
+      0 0 35px rgba(255, 0, 0, 0.5),
+      0 0 60px rgba(255, 0, 0, 0.15);
+  }
+}
+
+
+@keyframes dangerBlink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+
+@keyframes warningFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.18;
+  }
+
+  100% {
+    transform:
+      translateY(-110vh)
+      rotate(180deg);
+
+    opacity: 0;
+  }
+}
+
+
+@keyframes cardAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media (max-width: 576px) {
+
+  .fake-page {
+    align-items: center;
+  }
+
+  .fake-card {
+
+    width: calc(100% - 24px);
+
+    padding:
+      30px
+      20px
+      32px;
+
+    border-radius: 15px;
+  }
+
+  .status-line {
+
+    font-size: 0.58rem;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 18px;
+  }
+
+  .warning-icon {
+
+    width: 70px;
+    height: 70px;
+
+    font-size: 32px;
+
+    margin-bottom: 16px;
+  }
+
+  .warning-label {
+
+    font-size: 0.58rem;
+
+    letter-spacing: 2px;
+  }
+
+  h1 {
+
+    font-size: 2rem;
+  }
+
+  .main-message {
+
+    font-size: 0.95rem;
+  }
+
+  .reason-box {
+
+    padding: 12px;
+
+    gap: 10px;
+  }
+
+  .reason-icon {
+
+    font-size: 22px;
+  }
+
+  .reason-text p {
+
+    font-size: 0.8rem;
+  }
+
+  .sub-message {
+
+    font-size: 0.88rem;
+  }
+
+  .small-note {
+
+    font-size: 0.68rem;
+  }
+
+  .warning-strip {
+
+    height: 27px;
+
+    gap: 20px;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 1px;
+  }
+
+  .footer {
+
+    bottom: 31px;
+
+    font-size: 0.55rem;
+  }
+}
+
+
+/* ========================================= */
+/* VERY SMALL PHONES */
+/* ========================================= */
+
+@media (max-height: 700px) {
+
+  .fake-card {
+
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  .warning-icon {
+
+    width: 62px;
+    height: 62px;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+  }
+
+  .status-line {
+
+    margin-bottom: 12px;
+  }
+
+  .divider {
+
+    margin: 12px auto;
+  }
+
+  .reason-box {
+
+    margin: 15px auto;
+
+    padding: 10px;
+  }
+
+  .sub-message {
+
+    margin-top: 15px;
+  }
+
+  .small-note {
+
+    margin-top: 15px;
+  }
+}

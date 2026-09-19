@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FakePage } from './components/fake-page/fake-page';
 import { Login } from './components/login/login';
+
 import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
 import { GiftBox } from './components/gift-box/gift-box';
@@ -21,7 +23,9 @@ import { MusicPlayer } from './components/music-player/music-player';
   imports: [
     CommonModule,
 
+    FakePage,
     Login,
+
     Navbar,
     Hero,
     GiftBox,
@@ -40,10 +44,13 @@ import { MusicPlayer } from './components/music-player/music-player';
 })
 export class App {
 
-  unlocked = false;
+  page: 'fake' | 'login' | 'website' = 'fake';
 
-  unlockWebsite(): void {
-    this.unlocked = true;
+  openLogin(): void {
+    this.page = 'login';
   }
 
+  unlockWebsite(): void {
+    this.page = 'website';
+  }
 }

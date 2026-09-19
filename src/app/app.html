@@ -1,20 +1,19 @@
-<!-- =========================================
-     LOGIN / PIN SCREEN
-========================================= -->
+<!-- FAKE PAGE -->
+<app-fake-page
+  *ngIf="page === 'fake'"
+  (openLogin)="openLogin()">
+</app-fake-page>
 
+
+<!-- LOGIN PAGE -->
 <app-login
-  *ngIf="!unlocked"
+  *ngIf="page === 'login'"
   (unlocked)="unlockWebsite()">
 </app-login>
 
 
-<!-- =========================================
-     MAIN WEBSITE
-========================================= -->
-
-<div
-  *ngIf="unlocked"
-  class="main-website">
+<!-- REAL BIRTHDAY WEBSITE -->
+<ng-container *ngIf="page === 'website'">
 
   <app-navbar></app-navbar>
 
@@ -38,4 +37,4 @@
 
   <app-music-player></app-music-player>
 
-</div>
+</ng-container>
